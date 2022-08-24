@@ -30,9 +30,19 @@ export default function App() {
       <Image
         style={{
           width: 400,
-          heihgt: 40,
+          height: 400,
         }}
         source={require("./image/doo.png")}
+      />
+
+      <Image
+        style={{
+          width: 400,
+          height: 400,
+        }}
+        source={{
+          uri: "https://mma.prnewswire.com/media/1676380/Horizen_Logo.jpg",
+        }}
       />
     </View>
   );
