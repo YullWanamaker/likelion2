@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "likelion2",
+    "slug": "likelion2",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
