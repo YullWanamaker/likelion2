@@ -8,42 +8,46 @@ import {
   TextInput,
   Button,
   Alert,
-  Scrollview,
+  ScrollView,
+  SafeAreaView,
+  TouchableOpacity,
+  Touchable,
 } from "react-native";
 
 export default function App() {
   return (
-    <View
-      style={{
-        height: 200,
-        padding: 50,
-      }}
-    >
-      <Text
-        style={{
-          fontSize: 30,
-          fontWeight: "900",
-        }}
-      >
-        Hi yulls
-      </Text>
-      <Image
-        style={{
-          width: 400,
-          height: 400,
-        }}
-        source={require("./image/doo.png")}
-      />
-
-      <Image
-        style={{
-          width: 400,
-          height: 400,
-        }}
-        source={{
-          uri: "https://mma.prnewswire.com/media/1676380/Horizen_Logo.jpg",
-        }}
-      />
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <View style={{ height: 300 }}></View>
+        <View style={{ height: 300, alignItems: "center" }}>
+          <TextInput
+            style={{
+              borederWidth: 1,
+              padding: 10,
+              width: "80%",
+              borderRadius: 5,
+              marginBottom: 20,
+            }}
+            placeholder="메뉴입력"
+          />
+          <TouchableOpacity
+            style={{
+              width: 110,
+              backgroundColor: "blue",
+              alignItems: "center",
+              padding: 10,
+              borderRadius: 10,
+            }}
+            onPress={() => {
+              Alert.alert("커스텀 버튼 누르기");
+            }}
+          >
+            <Text style={{ color: "white", fontWeight: "900", fontSize: 20 }}>
+              메뉴 추가
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
