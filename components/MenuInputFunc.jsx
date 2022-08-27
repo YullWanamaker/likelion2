@@ -46,8 +46,6 @@ const MenuInputFunc = ({ selectList, setSelectList }) => {
           borderRadius: 10,
         }}
         onPress={() => {
-          let newArray = [...selectList, ""];
-          setSelectList(newArray);
           if (selectList[selectList.length - 1] === "") {
             Alert.alert(
               "메뉴를 입력하세요",
@@ -56,7 +54,7 @@ const MenuInputFunc = ({ selectList, setSelectList }) => {
                 {
                   text: "네",
                   onPress: () => {
-                    console.log("ok!!");
+                    console.log("OK!!!");
                   },
                 },
               ]
